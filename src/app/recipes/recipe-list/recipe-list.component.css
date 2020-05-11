@@ -1,0 +1,23 @@
+
+@media screen and (min-width: 768px) {
+    div.scroll { 
+        height: 800px; 
+        overflow-x: hidden; 
+        overflow-x: auto; 
+        text-align:justify; 
+    } 
+}
+
+.sm-screen{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .sm-screen {
+        display: block;
+    }
+  }
+  
+  .profile-info::-webkit-scrollbar{
+    width: 0px;
+}
