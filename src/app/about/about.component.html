@@ -1,0 +1,88 @@
+<div class="row">
+    <div class="col-xs-10 col-lg-12">
+        <div class="profile-img">
+            <img src="assets/image/my-image.jpeg" alt="my-image">
+        </div>
+        <div class="profile-info">
+            <h1 class="mt-2 mb-3">Micheal Abid Fekry</h1>
+            <p class="about">I am a full stack developer ( angular-laravel ), i make this website by angular based on SEO and
+                used firebase as a back end to can handle auth users, make signup/login to the website and add other
+                functionality,
+                i am waiting your opinion to improve this code.
+            </p>
+            <div class="social-media mt-2 ml-2">
+                <a href="https://www.facebook.com/micheal.abid.fekry" target="_blank" title="go to facebook.">
+                    <img src="assets/image/fb-icon.png" alt="facebook-icon">
+                </a>
+                <a href="https://github.com/michealabidfekrysaad" target="_blank" title="go to github.">
+                    <img src="assets/image/github-icon.png" alt="github-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/micheal-abid-fekry-52a500184/" target="_blank"
+                    title="go to linkedin.">
+                    <img src="assets/image/linkedin-icon.png" alt="linkedin-icon">
+                </a>
+                <a href="https://wa.me/201279211807" target="_blank" title="send message via whats.">
+                    <img src="assets/image/whatsapp.png" alt="whatsapp-icon">
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=michealabidfekry@gmail.com" target="_blank"
+                    title="send message via gmail.">
+                    <img src="assets/image/Gmail_Icon.png" alt="gmail-icon">
+                </a>
+                <a href="assets/image/Micheal's Resume.pdf" target="_blank" title="download cv.">
+                    <img src="assets/image/resume.png" alt="cv-icon">
+                </a>
+
+
+            </div>
+            <h2 class="mt-5 mb-2">Expertise</h2>
+            <div class="expertise">
+                <img src="assets/image/web.jpeg" alt="">
+                <p><b>Front-end</b></p>
+                <small>
+                    Can deal with angular, javascript, typescript, css, bootstrap,
+                    html5, Es6, jquery,
+                </small>
+            </div>
+            <div class="expertise">
+                <img src="assets/image/responsive.png" alt="">
+                <p><b>Responsive</b></p>
+                <small>
+                    It is to build web pages that detect the visitor's screen size and
+                    orientation. </small>
+            </div>
+            <div class="expertise">
+                <img src="assets/image/database.png" alt="">
+                <p><b>Back-end</b></p>
+                <small>
+                    Can deal with laravel, php, mysql, firebase, database normalization
+                </small>
+            </div>
+            <h2 class="mt-5 mb-2">My project work</h2>
+            <div class="projects">
+                <a href=""  target="_blank" aria-label="visit website">
+                    <img src="assets/image/recipe-home.png" alt="" class="myImg">
+                </a>
+                <a href="http://to-find.herokuapp.com/" target="_blank" aria-label="visit website">
+                    <img src="assets/image/tofind.png" alt="" class="myImg">
+                </a>
+                <img (click)="onClickImage($event)" src="assets/image/invitaion-card.png" alt="project-image" class="myImg">
+                <img (click)="onClickImage($event)" src="assets/image/contact-us.png" alt="project-image" class="myImg">
+                <img (click)="onClickImage($event)" src="assets/image/home-bootstrap.png" alt="project-image" class="myImg">
+                <img (click)="onClickImage($event)" src="assets/image/home-fokir.png" alt="project-image" class="myImg">
+
+            <div class="contact">
+                <span><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    michealabidfekry@gmail</span>
+                <span><i class="fa fa-phone" aria-hidden="true"></i>
+                    01066030313</span>
+            </div>
+
+
+
+        </div>
+        <div id="myModal" class="modal" #modal>
+            <span class="close" #spanClose (click)="onCloseImg($event)">&times;</span>
+            <img class="modal-content" id="img01" #modalImg>
+          </div>
+    </div>
+</div>

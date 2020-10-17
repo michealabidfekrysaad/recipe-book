@@ -1,0 +1,8 @@
+span{
+    color: rgb(0, 87, 185);
+}
+@media screen and (max-width: 768px) {
+    .card {
+        display: none;
+    }
+  }

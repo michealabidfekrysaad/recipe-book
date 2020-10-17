@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-primary mb-3">
+    <a class="navbar-brand" style="cursor: pointer;" routerLink="/recipes">Recipe Book</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item" roterLinkactive="active" *ngIf="isAuthenticated">
+                <a class="nav-link red " routerLink="/recipes">Recipes </a>
+            </li>
+            <li class="nav-item" roterLinkactive="active" *ngIf="!isAuthenticated">
+                <a class="nav-link" routerLink="/auth">Sign up/ Login</a>
+            </li>
+            <li class="nav-item" roterLinkactive="active" *ngIf="isAuthenticated">
+                <a class="nav-link" routerLink="/shopping-list">Shopping list</a>
+            </li>
+            <li class="nav-item" roterLinkactive="active" >
+                <a class="nav-link" routerLink="/about">About</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right mr-4">
+
+            <li class="dropdown mr-5" *ngIf="isAuthenticated">
+                <a class="nav-link dropdown-toggle" style="cursor: pointer;" id="dropdownId" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu" style="left: -300%;" aria-labelledby="dropdownId">
+                    <a class="dropdown-item pb-2 text-primary font-weight-bold">Hello {{userName}}...</a>
+                    <a class="dropdown-item" style="cursor: pointer;" (click)="onSaveData()">Save your data </a>
+                    <a class="dropdown-item" style="cursor: pointer;" (click)="onFetchData()">Fetch your data</a>
+                    <a class="dropdown-item" style="cursor: pointer;" (click)="onLogout()">Logout</a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</nav>

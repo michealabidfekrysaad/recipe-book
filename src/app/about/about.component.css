@@ -1,0 +1,222 @@
+#back-ground{
+    background: #efefef;
+    font-family: sans-serif;
+}
+.profile-img{
+    width: 40%;
+    float: right;
+    overflow: hidden;
+    height: 80%;
+}
+.profile-img img{
+    width: 60%;
+    height: 60vh;
+    transform: scale(1.10);
+    transition: opacity 4s ease-in-out, transform 4s ease-in-out;
+    margin-left: 20%;
+    border-radius: 40%;
+}
+.profile-img img:hover{
+    animation: coin-rotate 4s both ease-in-out;
+}
+@keyframes coin-rotate {
+    0% {
+      transform: rotateY(0) scale(1.10);
+      opacity: .5;
+    }
+    50% {
+      transform: rotateY(180deg) scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: rotateY(0deg) scale(1.10);
+      opacity: .5;
+    }
+  }
+
+/* above is section profile */
+.about{
+    margin-left: 15px;
+}
+.profile-info{
+    width: 60%;
+    height: 89vh;
+    float: left;
+    padding: 0 30px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.profile-info::-webkit-scrollbar{
+    width: 0px;
+}
+/* below is image of social */
+.social-media img{
+    height: 30px;
+    margin-right: 15px;
+    transition: transform .6s;
+}
+.social-media img:hover{
+    transform: scale(1.5);
+}
+/* below is image for front.resp.back */
+.expertise img {
+    height: 5%;
+    width: 50%;
+    margin: 5px;
+}
+.expertise{
+    display: inline-block;
+    width: 25%;
+    padding: 30px 10px;
+    margin: 2%;
+    text-align: center;
+    box-shadow: 0 0 25px 1px rgba(0, 51, 255, 0.18);
+    background: white;
+}
+.expertise small{
+    padding-top: 10px;
+    display: block;
+    text-align: center;
+}
+/* projects samples */
+.projects img {
+    width: 30%;
+    padding: 4px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+
+.projects img:hover{
+    opacity: 0.5;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+  }
+
+  .modal-content{  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 80% !important;
+      height: 50% !important;
+    }
+  }
+
+.projects a:hover {
+    position: relative;
+}
+
+a[aria-label]:hover:after {
+     content: attr(aria-label);
+     padding: 4px 8px;
+     position: absolute;
+     left: 40%;
+     top: 50%;
+     white-space: nowrap;
+     z-index: 20;
+     background:rgb(0, 0, 0);
+     border-radius: 4px;
+     color: white;
+}
+
+
+.contact img{
+    width: 20px;
+    margin: -5px 10px;
+}
+.contact span{
+    margin: 3%;
+}
+.contact {
+    margin: 5% 0% 5% 15%;
+    width: 75%;
+}
+@media only screen and (max-width:900px){
+    .profile-info{
+        width: 100%;
+        overflow: inherit;
+    }
+    .profile-img{
+        width: 100%;
+        height: 40%;
+    }
+    .profile-img p {
+        display: none;
+    }
+    .social-media{
+        width: 100%;
+    }
+    .expertise{
+        width: 95%;
+        margin-bottom: 10%;
+    }
+    .expertise img {
+        height: 8%;
+        margin: 10px 0;
+    }
+    .projects img{
+        width: 80%;
+    }
+    .contact{
+        width: 100%
+    }
+    .contact span{
+        display: block;   
+    }
+}
